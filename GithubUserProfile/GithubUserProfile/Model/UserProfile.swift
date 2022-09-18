@@ -15,6 +15,8 @@ struct UserProfile: Hashable, Identifiable, Decodable {
     var htmlUrl: String
     var followers: Int
     var following: Int
+    var firstDate: String
+    var latestupdateDate: String
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -24,5 +26,7 @@ struct UserProfile: Hashable, Identifiable, Decodable {
         case htmlUrl = "html_url"
         case followers
         case following
+        case firstDate = "created_at"
+        case latestupdateDate = "updated_at"
     }
 }

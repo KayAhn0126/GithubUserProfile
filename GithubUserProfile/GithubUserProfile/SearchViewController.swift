@@ -17,6 +17,8 @@ class UserProfileViewController: UIViewController {
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var followerLabel: UILabel!
     @IBOutlet weak var followingLabel: UILabel!
+    @IBOutlet weak var firstDateLabel: UILabel!
+    @IBOutlet weak var latestUpdateLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +63,8 @@ class UserProfileViewController: UIViewController {
             self.loginLabel.text = "Github id : "
             self.followerLabel.text = "followers : 0"
             self.followingLabel.text = "following : 0"
+            self.firstDateLabel.text = "first date : yesterday"
+            self.latestUpdateLabel.text = "latest update : today"
             self.thumbnail.image = nil
             return
         }
@@ -68,7 +72,8 @@ class UserProfileViewController: UIViewController {
         self.loginLabel.text = "Github id : " + user.login
         self.followerLabel.text = "followers : \(user.followers)"
         self.followingLabel.text = "following : \(user.following)"
-        
+        self.firstDateLabel.text = "first date : \(user.firstDate)"
+        self.latestUpdateLabel.text = "latest update : \(user.latestupdateDate)"
         self.thumbnail.kf.setImage(with: user.avatarUrl)
     }
 }
