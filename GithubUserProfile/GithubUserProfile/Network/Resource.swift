@@ -2,7 +2,6 @@
 //  Resource.swift
 //  GithubUserSearch
 //
-//  Created by joonwon lee on 2022/05/28.
 //
 
 import Foundation
@@ -24,7 +23,6 @@ struct Resource<T: Decodable> {
         header.forEach { (key: String, value: String) in
             request.addValue(value, forHTTPHeaderField: key)
         }
-        
         return request
     }
     

@@ -26,11 +26,7 @@ class UserProfileViewController: UIViewController {
         embendSearchControl()
         bind()
     }
-    
-    
-    
-    // network
-    
+
     // setupUI
     private func setupUI() {
         thumbnail.layer.cornerRadius = 80
@@ -81,7 +77,6 @@ class UserProfileViewController: UIViewController {
 extension UserProfileViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let keyword = searchController.searchBar.text
-        
         print("search: \(keyword)")
     }
 }
