@@ -24,25 +24,25 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fl7-26-rtZ">
-                                <rect key="frame" x="40" y="378" width="65.5" height="29"/>
+                                <rect key="frame" x="40" y="378" width="369" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Github Id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpU-es-AOe">
-                                <rect key="frame" x="40" y="415" width="73.5" height="21.5"/>
+                                <rect key="frame" x="40" y="415" width="369" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="followers: 40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBH-Ei-ath">
-                                <rect key="frame" x="40" y="476.5" width="104" height="22"/>
+                                <rect key="frame" x="40" y="476.5" width="369" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="following: 40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBP-cf-Pxe">
-                                <rect key="frame" x="40" y="506.5" width="104" height="22"/>
+                                <rect key="frame" x="40" y="506.5" width="369" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
@@ -55,11 +55,15 @@
                             <constraint firstItem="IBP-cf-Pxe" firstAttribute="top" secondItem="EBH-Ei-ath" secondAttribute="bottom" constant="8" symbolic="YES" id="55X-tT-AT0"/>
                             <constraint firstItem="EBH-Ei-ath" firstAttribute="top" secondItem="rpU-es-AOe" secondAttribute="bottom" constant="40" id="6Ys-v1-onv"/>
                             <constraint firstItem="rpU-es-AOe" firstAttribute="leading" secondItem="Fl7-26-rtZ" secondAttribute="leading" id="Oxh-n2-crW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="IBP-cf-Pxe" secondAttribute="trailing" constant="5" id="Q6N-ee-fJ0"/>
                             <constraint firstItem="Hn7-fd-nSK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="Wpt-yc-3os"/>
                             <constraint firstItem="EBH-Ei-ath" firstAttribute="leading" secondItem="rpU-es-AOe" secondAttribute="leading" id="aU0-Ib-Gng"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="rpU-es-AOe" secondAttribute="trailing" constant="5" id="js6-10-f1J"/>
                             <constraint firstItem="IBP-cf-Pxe" firstAttribute="leading" secondItem="EBH-Ei-ath" secondAttribute="leading" id="lcW-rJ-PIq"/>
                             <constraint firstItem="rpU-es-AOe" firstAttribute="top" secondItem="Fl7-26-rtZ" secondAttribute="bottom" constant="8" symbolic="YES" id="lcc-Ad-fKJ"/>
                             <constraint firstItem="Hn7-fd-nSK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mUa-dd-tcg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Fl7-26-rtZ" secondAttribute="trailing" constant="5" id="mzI-9y-Z7u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="EBH-Ei-ath" secondAttribute="trailing" constant="5" id="uB3-1P-dmu"/>
                             <constraint firstItem="Fl7-26-rtZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="zhG-JQ-3Bj"/>
                         </constraints>
                     </view>
@@ -74,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1045" y="131"/>
+            <point key="canvasLocation" x="1039" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XMq-tZ-GAP">
