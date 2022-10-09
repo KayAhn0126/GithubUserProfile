@@ -10,7 +10,7 @@
 
 | 작동 화면 | 전체적인 흐름 |
 |:-:| :-: |
-|![](https://i.imgur.com/RsBOodO.gif)| ![](https://i.imgur.com/HXe19eS.png)|
+|![](https://i.imgur.com/RsBOodO.gif)| ![](https://i.imgur.com/PfJPDa1.png)|
 
 ## 🍎 코드 분석
 ### 앱의 가장 중심이 되는 UserProfileViewController
