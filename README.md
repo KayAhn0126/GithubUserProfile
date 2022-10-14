@@ -1,4 +1,6 @@
-# GithubUserProfile
+###### tags: `Fast-Campus`
+
+# 13. GithubUserProfile
 - Navigation Controller
 - UISearchController
 - Combine
@@ -216,18 +218,18 @@ final class NetworkService {
 ```
 
 ## 🍎 네트워크를 담당하는 NetworkService 클래스에서 eraseToAnyPublisher()는 무엇일까?
-- tryMap함수 내부는 아래와 같이 생겼다
+
+- eraseToAnyPublisher() 메서드의 먼저 정의부를 보자!
 ```swift
-func tryMap<T>(_ transform: @escaping ((data: Data, response: URLResponse)) throws -> T) -> Publishers.TryMap<URLSession.DataTaskPublisher, T>
+public func eraseToAnyPublisher() -> AnyPublisher<Self.Output, Self.Failure>
 ```
-- 즉 반환형이 Publishers.TryMap<URLSession.DataTaskPublisher, T>라는 것인데 eraseToAnyPublisher함수를 사용하게 되면 tryMap을 거치고 나온 반환형을 AnyPublisher< ~ , ~> 형태로 바꿔준다.
+- 즉, 어떤 publisher든지 AnyPublisher<Self.Output, Self.Failure>로 만들어 주는 메서드다!
+
 ```swift
 let x = PassthroughSubject<String, Never>()
 //////////생략
 }.eraseToAnyPublisher()
 // 이제 x는 AnyPublisher<String, Never>
 ```
-- Operation에서의 데이터를 처리할 땐 Operation 상호 간 에러 처리나 혹은 스트림 제어를 위해서 데이터 형식을 알아야 하지만 Subscrbier에게 전달될 땐 필요가 없게 됩니다. 따라서 최종적인 형태로 데이터를 전달할 땐 eraseToAnyPublisher를 사용하게 됩니다.[출처](https://medium.com/harrythegreat/swift-combine-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B03-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%9A%94%EC%B2%AD-f36d6a32af14)
-
-## 🍎 보충해야 할 점.
-- combine과 network가 같이 나와 많이 헷갈리지만 더 공부하기 (천천히, 더 많이!)
+- 왜 필요할까?
+    - Operation에서의 데이터를 처리할 땐 Operation 상호 간 에러 처리나 혹은 스트림 제어를 위해서 데이터 형식을 알아야 하지만 Subscrbier에게 전달될 땐 필요가 없게 됩니다. 따라서 최종적인 형태로 데이터를 전달할 땐 eraseToAnyPublisher를 사용하게 됩니다.[출처](https://medium.com/harrythegreat/swift-combine-%EC%9E%85%EB%AC%B8%ED%95%98%EA%B8%B03-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%9A%94%EC%B2%AD-f36d6a32af14)
